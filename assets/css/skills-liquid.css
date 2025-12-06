@@ -1,0 +1,110 @@
+/*--------------------------------------------------------------
+# Skills Section - Liquid Glassmorphism Theme
+--------------------------------------------------------------*/
+
+.skills .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.skills .skill-category {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow), 0 0 20px rgba(0, 217, 255, 0.1);
+    transition: all var(--transition-slow);
+    position: relative;
+    overflow: hidden;
+}
+
+.skills .skill-category::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 217, 255, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity var(--transition-slow);
+}
+
+.skills .skill-category:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--glass-shadow), 0 0 40px rgba(0, 217, 255, 0.3);
+    border-color: var(--liquid-primary);
+}
+
+.skills .skill-category:hover::before {
+    opacity: 1;
+}
+
+.skills .category-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--liquid-primary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: "Poppins", sans-serif;
+    text-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
+}
+
+.skills .category-icon {
+    font-size: 28px;
+    line-height: 1;
+}
+
+.skills .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills .skill-tag {
+    display: inline-block;
+    padding: 10px 18px;
+    background: rgba(0, 217, 255, 0.1);
+    color: var(--liquid-primary-dark);
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all var(--transition-normal);
+    border: 1px solid rgba(0, 217, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.skills .skill-tag:hover {
+    background: var(--liquid-primary);
+    color: #ffffff;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px var(--liquid-glow);
+    border-color: var(--liquid-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .skills .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .skills .skill-category {
+        padding: 20px;
+    }
+
+    .skills .category-title {
+        font-size: 18px;
+    }
+
+    .skills .skill-tag {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}

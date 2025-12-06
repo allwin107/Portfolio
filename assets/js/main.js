@@ -6,7 +6,7 @@
 * License: https://bootstrapmade.com/license/
 */
 
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -92,7 +92,7 @@
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', function (e) {
     select('body').classList.toggle('mobile-nav-active')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
@@ -101,7 +101,7 @@
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '.scrollto', function(e) {
+  on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
       e.preventDefault()
 
@@ -151,7 +151,7 @@
     new Waypoint({
       element: skilsContent,
       offset: '80%',
-      handler: function(direction) {
+      handler: function (direction) {
         let progress = select('.progress .progress-bar', true);
         progress.forEach((el) => {
           el.style.width = el.getAttribute('aria-valuenow') + '%'
@@ -172,9 +172,9 @@
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
+      on('click', '#portfolio-flters li', function (e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        portfolioFilters.forEach(function (el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
@@ -182,7 +182,7 @@
         portfolioIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
-        portfolioIsotope.on('arrangeComplete', function() {
+        portfolioIsotope.on('arrangeComplete', function () {
           AOS.refresh()
         });
       }, true);
@@ -248,10 +248,11 @@
    */
   window.addEventListener('load', () => {
     AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
+      duration: 700,
+      easing: 'ease-out-cubic',
       once: true,
-      mirror: false
+      mirror: false,
+      offset: 100
     })
   });
 
@@ -284,12 +285,12 @@ async function loadSkills() {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data = await response.json();
-    
+
     // Validate data structure
     if (!data || !data.skillCategories || !Array.isArray(data.skillCategories)) {
       throw new Error('Invalid skills data structure');
     }
-    
+
     renderSkills(data.skillCategories);
   } catch (error) {
     console.error('Error loading skills:', error);
@@ -312,7 +313,7 @@ function renderSkills(skillCategories) {
   if (!container) return;
 
   let html = '';
-  
+
   skillCategories.forEach((category, index) => {
     const delay = index * 100;
     html += `
@@ -329,9 +330,9 @@ function renderSkills(skillCategories) {
       </div>
     `;
   });
-  
+
   container.innerHTML = html;
-  
+
   // Refresh AOS animations if available
   if (typeof AOS !== 'undefined') {
     AOS.refresh();
@@ -360,12 +361,12 @@ async function loadProjects() {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data = await response.json();
-    
+
     // Validate data structure
     if (!data || !data.projects || !Array.isArray(data.projects)) {
       throw new Error('Invalid projects data structure');
     }
-    
+
     // Check if projects array is empty
     if (data.projects.length === 0) {
       container.innerHTML = `
@@ -377,7 +378,7 @@ async function loadProjects() {
       `;
       return;
     }
-    
+
     renderProjects(data.projects);
   } catch (error) {
     console.error('Error loading projects:', error);
@@ -399,37 +400,37 @@ function getProjectType(project) {
   const tech = project.technologies.map(t => t.toLowerCase()).join(' ');
   const title = project.title.toLowerCase();
   const summary = project.summary.toLowerCase();
-  
+
   // Check for voice-AI projects
-  if (tech.includes('voice') || tech.includes('speech') || tech.includes('elevenlabs') || 
-      tech.includes('whisper') || title.includes('voice') || summary.includes('voice')) {
+  if (tech.includes('voice') || tech.includes('speech') || tech.includes('elevenlabs') ||
+    tech.includes('whisper') || title.includes('voice') || summary.includes('voice')) {
     return 'voice-ai';
   }
-  
+
   // Check for backend API projects
-  if (tech.includes('api') || tech.includes('flask') || tech.includes('fastapi') || 
-      tech.includes('rest') || title.includes('api')) {
+  if (tech.includes('api') || tech.includes('flask') || tech.includes('fastapi') ||
+    tech.includes('rest') || title.includes('api')) {
     return 'backend-api';
   }
-  
+
   // Check for NLP projects
-  if (tech.includes('nlp') || tech.includes('spacy') || tech.includes('llama') || 
-      tech.includes('text') || title.includes('nlp') || summary.includes('nlp')) {
+  if (tech.includes('nlp') || tech.includes('spacy') || tech.includes('llama') ||
+    tech.includes('text') || title.includes('nlp') || summary.includes('nlp')) {
     return 'nlp';
   }
-  
+
   // Check for UI projects
-  if (tech.includes('html') || tech.includes('css') || tech.includes('react') || 
-      tech.includes('vue') || tech.includes('ui') || project.liveDemo) {
+  if (tech.includes('html') || tech.includes('css') || tech.includes('react') ||
+    tech.includes('vue') || tech.includes('ui') || project.liveDemo) {
     return 'ui';
   }
-  
+
   // Check for complex/architecture projects
   if (tech.includes('machine learning') || tech.includes('ml') || tech.includes('pipeline') ||
-      summary.includes('system') || summary.includes('architecture')) {
+    summary.includes('system') || summary.includes('architecture')) {
     return 'complex';
   }
-  
+
   return 'general';
 }
 
@@ -439,15 +440,15 @@ function getProjectType(project) {
 function renderVisualAssets(project) {
   const projectType = getProjectType(project);
   let visualHtml = '';
-  
+
   // Determine if project is interactive (has video or live demo)
   const isInteractive = project.video || project.liveDemo;
-  
+
   // Main thumbnail with lazy loading and error handling
   const thumbnailSrc = project.thumbnail || 'https://via.placeholder.com/400x220/667eea/ffffff?text=' + encodeURIComponent(project.title);
   const thumbnailAlt = `${project.title} - ${project.summary}`;
   const fallbackImage = 'https://via.placeholder.com/400x220/667eea/ffffff?text=' + encodeURIComponent(project.title);
-  
+
   visualHtml += `
     <img src="${thumbnailSrc}" 
          alt="${thumbnailAlt}" 
@@ -455,7 +456,7 @@ function renderVisualAssets(project) {
          loading="lazy" 
          onerror="handleImageError(this, '${fallbackImage.replace(/'/g, "\\'")}')">
   `;
-  
+
   // Add video for interactive projects (voice-AI, OCR, etc.)
   if (isInteractive && project.video) {
     visualHtml += `
@@ -471,7 +472,7 @@ function renderVisualAssets(project) {
       </div>
     `;
   }
-  
+
   // Add additional screenshots for UI projects
   if (projectType === 'ui' && project.images && project.images.length > 0) {
     visualHtml += '<div class="project-screenshots">';
@@ -486,7 +487,7 @@ function renderVisualAssets(project) {
     });
     visualHtml += '</div>';
   }
-  
+
   // Add architecture diagram indicator for complex projects
   if (projectType === 'complex' && project.diagram) {
     visualHtml += `
@@ -499,7 +500,7 @@ function renderVisualAssets(project) {
       </div>
     `;
   }
-  
+
   // Add type indicator badge
   const typeBadges = {
     'voice-ai': '<span class="badge-type badge-voice">Voice-AI</span>',
@@ -509,7 +510,7 @@ function renderVisualAssets(project) {
     'complex': '<span class="badge-type badge-complex">ML System</span>',
     'general': ''
   };
-  
+
   return {
     html: visualHtml,
     typeBadge: typeBadges[projectType] || ''
@@ -522,7 +523,7 @@ function renderVisualAssets(project) {
 function renderDemonstration(project) {
   const projectType = getProjectType(project);
   let demoHtml = '';
-  
+
   // Voice-AI projects: video walkthrough or live demo
   if (projectType === 'voice-ai') {
     if (project.video) {
@@ -543,7 +544,7 @@ function renderDemonstration(project) {
       `;
     }
   }
-  
+
   // Backend API projects: API documentation and examples
   if (projectType === 'backend-api' && project.apiDocumentation) {
     demoHtml += `
@@ -554,7 +555,7 @@ function renderDemonstration(project) {
             <i class="bi bi-book"></i> View Full API Documentation
           </a>
     `;
-    
+
     if (project.apiExample) {
       demoHtml += `
           <div class="api-example">
@@ -566,13 +567,13 @@ ${JSON.stringify(project.apiExample.request, null, 2)}</code></pre>
           </div>
       `;
     }
-    
+
     demoHtml += `
         </div>
       </div>
     `;
   }
-  
+
   // NLP projects: example inputs and outputs
   if (projectType === 'nlp' && project.nlpExamples) {
     demoHtml += `
@@ -580,7 +581,7 @@ ${JSON.stringify(project.apiExample.request, null, 2)}</code></pre>
         <h4><i class="bi bi-chat-left-text"></i> Example Classifications</h4>
         <div class="nlp-examples">
     `;
-    
+
     project.nlpExamples.forEach((example, idx) => {
       demoHtml += `
           <div class="nlp-example">
@@ -607,13 +608,13 @@ ${JSON.stringify(project.apiExample.request, null, 2)}</code></pre>
           </div>
       `;
     });
-    
+
     demoHtml += `
         </div>
       </div>
     `;
   }
-  
+
   // For projects without live demos: comprehensive video demonstration
   if (!project.liveDemo && project.video && project.demoType === 'video') {
     demoHtml += `
@@ -632,7 +633,7 @@ ${JSON.stringify(project.apiExample.request, null, 2)}</code></pre>
       </div>
     `;
   }
-  
+
   return demoHtml;
 }
 
@@ -644,15 +645,15 @@ function renderProjects(projects) {
   if (!container) return;
 
   let html = '';
-  
+
   projects.forEach((project, index) => {
     const delay = index * 100;
-    
+
     // Build technology tags
-    const techTags = project.technologies.map(tech => 
+    const techTags = project.technologies.map(tech =>
       `<span class="tech-tag">${tech}</span>`
     ).join('');
-    
+
     // Build project links
     const links = [];
     if (project.liveDemo) {
@@ -665,16 +666,16 @@ function renderProjects(projects) {
         <i class="bi bi-github"></i> GitHub
       </a>`);
     }
-    
+
     // Render visual assets with conditional rendering
     const visualAssets = renderVisualAssets(project);
-    
+
     // Featured badge
     const featuredBadge = project.featured ? '<span class="badge-featured">Featured</span>' : '';
-    
+
     // Render project-specific demonstrations
     const demonstrationHtml = renderDemonstration(project);
-    
+
     html += `
       <div class="project-card" data-aos="fade-up" data-aos-delay="${delay}">
         <div class="project-visual">
@@ -727,12 +728,12 @@ function renderProjects(projects) {
       </div>
     `;
   });
-  
+
   container.innerHTML = html;
-  
+
   // Initialize lazy loading observer
   initializeLazyLoading();
-  
+
   // Refresh AOS animations if available
   if (typeof AOS !== 'undefined') {
     AOS.refresh();
@@ -749,16 +750,16 @@ function initializeLazyLoading() {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const img = entry.target;
-          
+
           // For images with data-src attribute
           if (img.dataset.src) {
             img.src = img.dataset.src;
             img.removeAttribute('data-src');
           }
-          
+
           // Add loaded class for fade-in effect
           img.classList.add('lazy-loaded');
-          
+
           // Stop observing this image
           observer.unobserve(img);
         }
@@ -767,11 +768,11 @@ function initializeLazyLoading() {
       rootMargin: '50px 0px',
       threshold: 0.01
     });
-    
+
     // Observe all images with loading="lazy"
     const lazyImages = document.querySelectorAll('img[loading="lazy"]');
     lazyImages.forEach(img => imageObserver.observe(img));
-    
+
     // Observe all videos
     const lazyVideos = document.querySelectorAll('video[preload="metadata"]');
     lazyVideos.forEach(video => imageObserver.observe(video));
@@ -791,12 +792,12 @@ window.addEventListener('load', () => {
 /**
  * Contact Form Validation and Submission
  */
-(function() {
+(function () {
   'use strict';
 
   // Get form element
   const contactForm = document.getElementById('contactForm');
-  
+
   if (!contactForm) return;
 
   // Validation rules
@@ -896,12 +897,12 @@ window.addEventListener('load', () => {
   function showError(fieldName, message) {
     const field = document.getElementById(fieldName);
     const errorElement = document.getElementById(`${fieldName}-error`);
-    
+
     if (field) {
       field.classList.add('error');
       field.classList.remove('success');
     }
-    
+
     if (errorElement) {
       errorElement.textContent = message;
     }
@@ -913,12 +914,12 @@ window.addEventListener('load', () => {
   function clearError(fieldName) {
     const field = document.getElementById(fieldName);
     const errorElement = document.getElementById(`${fieldName}-error`);
-    
+
     if (field) {
       field.classList.remove('error');
       field.classList.add('success');
     }
-    
+
     if (errorElement) {
       errorElement.textContent = '';
     }
@@ -936,7 +937,7 @@ window.addEventListener('load', () => {
       if (!field) return;
 
       const validation = validateField(fieldName, field.value);
-      
+
       if (!validation.valid) {
         showError(fieldName, validation.message);
         isValid = false;
@@ -995,7 +996,7 @@ window.addEventListener('load', () => {
   // Real-time validation on blur
   const formFields = contactForm.querySelectorAll('input, textarea');
   formFields.forEach(field => {
-    field.addEventListener('blur', function() {
+    field.addEventListener('blur', function () {
       const validation = validateField(this.id, this.value);
       if (!validation.valid) {
         showError(this.id, validation.message);
@@ -1005,7 +1006,7 @@ window.addEventListener('load', () => {
     });
 
     // Clear error on input
-    field.addEventListener('input', function() {
+    field.addEventListener('input', function () {
       const errorElement = document.getElementById(`${this.id}-error`);
       if (errorElement && errorElement.textContent) {
         const validation = validateField(this.id, this.value);
@@ -1017,7 +1018,7 @@ window.addEventListener('load', () => {
   });
 
   // Form submission
-  contactForm.addEventListener('submit', function(e) {
+  contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
     // Validate form
@@ -1044,37 +1045,37 @@ window.addEventListener('load', () => {
         'X-Requested-With': 'XMLHttpRequest'
       }
     })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.text();
-    })
-    .then(data => {
-      // Show success message
-      showMessage('success', 'Your message has been sent successfully! I\'ll get back to you soon.');
-      
-      // Reset form after 2 seconds
-      setTimeout(() => {
-        resetForm();
-        showMessage(''); // Hide all messages
-      }, 3000);
-    })
-    .catch(error => {
-      console.error('Form submission error:', error);
-      showMessage('error', 'Sorry, there was an error sending your message. Please try again or contact me directly via email.');
-    })
-    .finally(() => {
-      // Re-enable submit button
-      if (submitButton) {
-        submitButton.disabled = false;
-      }
-    });
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text();
+      })
+      .then(data => {
+        // Show success message
+        showMessage('success', 'Your message has been sent successfully! I\'ll get back to you soon.');
+
+        // Reset form after 2 seconds
+        setTimeout(() => {
+          resetForm();
+          showMessage(''); // Hide all messages
+        }, 3000);
+      })
+      .catch(error => {
+        console.error('Form submission error:', error);
+        showMessage('error', 'Sorry, there was an error sending your message. Please try again or contact me directly via email.');
+      })
+      .finally(() => {
+        // Re-enable submit button
+        if (submitButton) {
+          submitButton.disabled = false;
+        }
+      });
   });
 
   // Prevent form submission on Enter key in input fields (except textarea)
   contactForm.querySelectorAll('input').forEach(input => {
-    input.addEventListener('keypress', function(e) {
+    input.addEventListener('keypress', function (e) {
       if (e.key === 'Enter') {
         e.preventDefault();
         // Move to next field
@@ -1103,7 +1104,7 @@ function handleImageError(img, fallbackUrl) {
     img.alt = 'Image not available';
     return;
   }
-  
+
   img.dataset.errorHandled = 'true';
   img.src = fallbackUrl || 'https://via.placeholder.com/400x220/667eea/ffffff?text=Image+Not+Available';
   img.classList.add('image-fallback');
@@ -1113,7 +1114,7 @@ function handleImageError(img, fallbackUrl) {
 /**
  * Feature Detection and Graceful Degradation
  */
-(function() {
+(function () {
   'use strict';
 
   // Check for IntersectionObserver support (for lazy loading)
@@ -1191,7 +1192,7 @@ function handleImageError(img, fallbackUrl) {
 /**
  * Network Status Detection
  */
-(function() {
+(function () {
   'use strict';
 
   // Check if online/offline events are supported
@@ -1244,10 +1245,10 @@ function handleImageError(img, fallbackUrl) {
 /**
  * Global Error Handler
  */
-window.addEventListener('error', function(event) {
+window.addEventListener('error', function (event) {
   // Log errors for debugging
   console.error('Global error:', event.error);
-  
+
   // Don't show error UI for script loading errors (handled elsewhere)
   if (event.filename && event.filename.includes('.js')) {
     console.warn('Script loading error:', event.filename);
@@ -1257,7 +1258,7 @@ window.addEventListener('error', function(event) {
 /**
  * Unhandled Promise Rejection Handler
  */
-window.addEventListener('unhandledrejection', function(event) {
+window.addEventListener('unhandledrejection', function (event) {
   console.error('Unhandled promise rejection:', event.reason);
   event.preventDefault(); // Prevent default browser error handling
 });

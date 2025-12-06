@@ -155,6 +155,24 @@ h6 {
   background: rgba(20, 157, 221, 0.8);
 }
 
+/* Custom Scrollbar for Navigation */
+#header nav::-webkit-scrollbar {
+  width: 6px;
+}
+
+#header nav::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+#header nav::-webkit-scrollbar-thumb {
+  background: rgba(20, 157, 221, 0.5);
+  border-radius: 3px;
+}
+
+#header nav::-webkit-scrollbar-thumb:hover {
+  background: rgba(20, 157, 221, 0.8);
+}
+
 /* Profile Section */
 #header .profile {
   padding: 40px 20px 30px;
@@ -175,7 +193,8 @@ h6 {
 
 #header .profile img {
   margin: 0 auto 20px;
-  display: block;
+  display: none;
+  /* Hidden per user request */
   width: 140px;
   height: 140px;
   border: 4px solid #149ddd;

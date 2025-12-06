@@ -108,11 +108,33 @@ h6 {
   z-index: 9997;
   padding: 0;
   background: linear-gradient(180deg, #0a1628 0%, #040b14 100%);
-  overflow-y: auto;
   box-shadow: 4px 0 24px rgba(0, 0, 0, 0.3);
-  /* Flexbox fix for footer alignment */
+  /* Flexbox layout: profile fixed, nav scrollable, footer fixed */
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  /* Prevent entire sidebar from scrolling */
+}
+
+/* Profile section - fixed at top */
+#header .profile {
+  flex-shrink: 0;
+  /* Don't shrink */
+}
+
+/* Navigation wrapper - scrollable middle section */
+#header nav {
+  flex-grow: 1;
+  /* Take remaining space */
+  overflow-y: auto;
+  /* Only nav scrolls */
+  overflow-x: hidden;
+}
+
+/* Footer - fixed at bottom */
+#header footer {
+  flex-shrink: 0;
+  /* Don't shrink */
 }
 
 /* Custom Scrollbar for Sidebar */
@@ -293,14 +315,11 @@ h6 {
   padding: 30px 15px 40px;
 }
 
-/* Sticky footer at bottom of sidebar */
+/* Footer styling */
 #header footer {
-  position: sticky;
-  bottom: 0;
-  background: linear-gradient(180deg, transparent 0%, #040b14 20%, #040b14 100%);
+  background: #040b14;
   padding: 20px 15px;
-  margin-top: auto;
-  z-index: 10;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-menu * {

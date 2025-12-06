@@ -293,6 +293,16 @@ h6 {
   padding: 30px 15px 40px;
 }
 
+/* Sticky footer at bottom of sidebar */
+#header footer {
+  position: sticky;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent 0%, #040b14 20%, #040b14 100%);
+  padding: 20px 15px;
+  margin-top: auto;
+  z-index: 10;
+}
+
 .nav-menu * {
   margin: 0;
   padding: 0;
@@ -2810,18 +2820,6 @@ img[alt=""] {
 #header {
   position: fixed;
   top: 0;
-}
-
-/* Enhanced navigation menu styling */
-.nav-menu {
-  padding: 30px 0 0 0;
-  flex-grow: 1;
-  /* Pushes footer to bottom */
-}
-
-.nav-menu * {
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
 

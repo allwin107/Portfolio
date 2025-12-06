@@ -1,0 +1,31 @@
+/*--------------------------------------------------------------
+# Projects
+--------------------------------------------------------------*/
+.project-screenshot {
+    height: 80px;
+}
+
+.badge-type {
+    font-size: 10px;
+    padding: 4px 10px;
+}
+
+/* Accessibility improvements for images */
+img[alt=""] {
+    outline: 2px solid red;
+    /* Development helper for missing alt text */
+}
+
+/* Print styles for images */
+@media print {
+
+    .project-video-container,
+    .project-screenshots {
+        display: none;
+    }
+
+    .project-thumbnail {
+        max-height: 200px;
+        page-break-inside: avoid;
+    }
+}

@@ -1,0 +1,167 @@
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about .content h3 {
+    font-weight: 700;
+    font-size: 26px;
+    color: #173b6c;
+}
+
+.about .content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about .content ul li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.about .content ul strong {
+    margin-right: 10px;
+}
+
+.about .content ul i {
+    font-size: 16px;
+    margin-right: 5px;
+    color: #149ddd;
+    line-height: 0;
+}
+
+.about .content p:last-child {
+    margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Bio/About Section Enhancements
+--------------------------------------------------------------*/
+.bio-content {
+    margin-top: 30px;
+}
+
+.bio-image img {
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.bio-image img:hover {
+    transform: scale(1.02);
+}
+
+.bio-intro {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #272829;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.bio-highlights {
+    margin-top: 30px;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    border-left: 4px solid #149ddd;
+}
+
+.highlight-item:hover {
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateX(5px);
+}
+
+.highlight-icon {
+    font-size: 32px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.highlight-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+}
+
+.highlight-content strong {
+    font-size: 14px;
+    color: #149ddd;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.highlight-text {
+    font-size: 16px;
+    color: #050d18;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.highlight-detail {
+    font-size: 14px;
+    color: #6c757d;
+    line-height: 1.4;
+}
+
+/* Responsive Design for Bio Section */
+@media (max-width: 991px) {
+    .bio-image {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .bio-image img {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .bio-intro {
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .highlight-item {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .highlight-icon {
+        font-size: 28px;
+    }
+
+    .highlight-content strong {
+        font-size: 13px;
+    }
+
+    .highlight-text {
+        font-size: 15px;
+    }
+
+    .highlight-detail {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 575px) {
+    .bio-highlights .col-md-6 {
+        margin-bottom: 0;
+    }
+
+    .highlight-item {
+        flex-direction: column;
+        align-items: center;
+    }
+}

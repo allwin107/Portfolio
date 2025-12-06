@@ -1,0 +1,26 @@
+# Development files
+dev-files/
+
+# Temporary files
+verification-results.txt
+results.txt
+*.backup
+*.backup2
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+
+# Logs
+*.log
+
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.local

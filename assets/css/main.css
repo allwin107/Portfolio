@@ -1,0 +1,377 @@
+/* ===================================
+   Main Stylesheet
+   Portfolio Website
+   =================================== */
+
+/* Import CSS Variables */
+@import url('variables.css');
+
+/* ===== CSS Reset & Base Styles ===== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Typography ===== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-4);
+}
+
+h1 {
+  font-size: var(--font-size-5xl);
+}
+
+h2 {
+  font-size: var(--font-size-4xl);
+}
+
+h3 {
+  font-size: var(--font-size-3xl);
+}
+
+h4 {
+  font-size: var(--font-size-2xl);
+}
+
+h5 {
+  font-size: var(--font-size-xl);
+}
+
+h6 {
+  font-size: var(--font-size-lg);
+}
+
+p {
+  margin-bottom: var(--space-4);
+  color: var(--color-text-secondary);
+}
+
+a {
+  color: var(--color-text-link);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-text-link-hover);
+}
+
+/* ===== Lists ===== */
+
+ul, ol {
+  list-style: none;
+}
+
+/* ===== Images ===== */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== Buttons ===== */
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: var(--space-3) var(--space-6);
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===== Forms ===== */
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  padding: var(--space-3);
+  border: 1px solid var(--color-border-medium);
+  border-radius: var(--radius-base);
+  width: 100%;
+  transition: border-color var(--transition-fast);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-lighter);
+}
+
+/* ===== Layout Utilities ===== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+.container-sm {
+  max-width: var(--container-sm);
+}
+
+.container-md {
+  max-width: var(--container-md);
+}
+
+.container-lg {
+  max-width: var(--container-lg);
+}
+
+.section {
+  padding: var(--space-20) 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: var(--space-12);
+  font-size: var(--font-size-4xl);
+  color: var(--color-text-primary);
+}
+
+/* ===== Grid System ===== */
+
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ===== Flexbox Utilities ===== */
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-2 {
+  gap: var(--space-2);
+}
+
+.gap-4 {
+  gap: var(--space-4);
+}
+
+.gap-6 {
+  gap: var(--space-6);
+}
+
+/* ===== Spacing Utilities ===== */
+
+.mt-4 { margin-top: var(--space-4); }
+.mb-4 { margin-bottom: var(--space-4); }
+.ml-4 { margin-left: var(--space-4); }
+.mr-4 { margin-right: var(--space-4); }
+
+.pt-4 { padding-top: var(--space-4); }
+.pb-4 { padding-bottom: var(--space-4); }
+.pl-4 { padding-left: var(--space-4); }
+.pr-4 { padding-right: var(--space-4); }
+
+/* ===== Text Utilities ===== */
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+/* ===== Visibility Utilities ===== */
+
+.hidden {
+  display: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ===== Responsive Design ===== */
+
+@media (max-width: 767px) {
+  html {
+    font-size: 14px;
+  }
+  
+  h1 {
+    font-size: var(--font-size-4xl);
+  }
+  
+  h2 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .section {
+    padding: var(--space-12) 0;
+  }
+  
+  .grid-cols-2,
+  .grid-cols-3,
+  .grid-cols-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .grid-cols-3,
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== Accessibility ===== */
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===== Print Styles ===== */
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .no-print {
+    display: none;
+  }
+}

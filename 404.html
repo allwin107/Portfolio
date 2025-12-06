@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>404 - Page Not Found | Allwin Raja</title>
+  <meta name="description" content="The page you're looking for doesn't exist.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Open Sans", sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .error-container {
+      text-align: center;
+      padding: 40px 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .error-code {
+      font-size: 120px;
+      font-weight: 700;
+      color: #ffffff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      margin: 0;
+      line-height: 1;
+      animation: fadeInDown 0.6s ease-out;
+    }
+
+    .error-icon {
+      font-size: 80px;
+      margin: 20px 0;
+      animation: bounce 2s infinite;
+    }
+
+    .error-title {
+      font-size: 32px;
+      font-weight: 600;
+      color: #ffffff;
+      margin: 20px 0;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .error-message {
+      font-size: 18px;
+      color: #f0f0f0;
+      margin: 20px 0 40px;
+      line-height: 1.6;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .error-actions {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    .btn {
+      padding: 14px 32px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      display: inline-block;
+      text-decoration: none;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+
+    .btn-primary {
+      background-color: #149ddd;
+      color: #ffffff;
+      border-color: #149ddd;
+    }
+
+    .btn-primary:hover {
+      background-color: #0d7db3;
+      border-color: #0d7db3;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(20, 157, 221, 0.4);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: #ffffff;
+      border-color: #ffffff;
+    }
+
+    .btn-secondary:hover {
+      background-color: #ffffff;
+      color: #667eea;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+    }
+
+    .helpful-links {
+      margin-top: 40px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      animation: fadeIn 1.4s ease-out;
+    }
+
+    .helpful-links h3 {
+      font-size: 18px;
+      color: #ffffff;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .helpful-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .helpful-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .helpful-links a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-10px);
+      }
+      60% {
+        transform: translateY(-5px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .error-code {
+        font-size: 80px;
+      }
+
+      .error-icon {
+        font-size: 60px;
+      }
+
+      .error-title {
+        font-size: 24px;
+      }
+
+      .error-message {
+        font-size: 16px;
+      }
+
+      .btn {
+        padding: 12px 24px;
+        font-size: 14px;
+      }
+
+      .error-actions {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .helpful-links ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .error-code {
+        font-size: 60px;
+      }
+
+      .error-icon {
+        font-size: 50px;
+      }
+
+      .error-title {
+        font-size: 20px;
+      }
+
+      .error-message {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="error-container">
+    <h1 class="error-code">404</h1>
+    <div class="error-icon">🔍</div>
+    <h2 class="error-title">Page Not Found</h2>
+    <p class="error-message">
+      Oops! The page you're looking for doesn't exist. It might have been moved, deleted, or the URL might be incorrect.
+    </p>
+
+    <div class="error-actions">
+      <a href="index.html" class="btn btn-primary">
+        <i class="bi bi-house-door"></i> Go Home
+      </a>
+      <button onclick="history.back()" class="btn btn-secondary">
+        <i class="bi bi-arrow-left"></i> Go Back
+      </button>
+    </div>
+
+    <div class="helpful-links">
+      <h3>Helpful Links</h3>
+      <ul>
+        <li><a href="index.html#about">About Me</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#Projects">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // Log 404 error for analytics (if implemented)
+    console.warn('404 Error: Page not found -', window.location.href);
+
+    // Optional: Send 404 to analytics
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'exception', {
+        'description': '404_page_not_found',
+        'fatal': false
+      });
+    }
+  </script>
+
+</body>
+
+</html>

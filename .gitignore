@@ -14,7 +14,7 @@ desktop.ini
 
 # Editor
 .vscode/
-
+.kiro
 # Logs
 *.log
 

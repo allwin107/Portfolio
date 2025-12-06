@@ -110,6 +110,9 @@ h6 {
   background: linear-gradient(180deg, #0a1628 0%, #040b14 100%);
   overflow-y: auto;
   box-shadow: 4px 0 24px rgba(0, 0, 0, 0.3);
+  /* Flexbox fix for footer alignment */
+  display: flex;
+  flex-direction: column;
 }
 
 /* Custom Scrollbar for Sidebar */
@@ -2807,25 +2810,13 @@ img[alt=""] {
 #header {
   position: fixed;
   top: 0;
-  left: 0;
-  bottom: 0;
-  width: 300px;
-  transition: all ease-in-out 0.5s;
-  z-index: 9997;
-  padding: 0 15px;
-  background: #040b14;
-  overflow-y: auto;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
 }
 
 /* Enhanced navigation menu styling */
 .nav-menu {
   padding: 30px 0 0 0;
+  flex-grow: 1;
+  /* Pushes footer to bottom */
 }
 
 .nav-menu * {

@@ -1,60 +1,194 @@
 /*--------------------------------------------------------------
-# Resume
+# Resume Section - Modern Redesign
 --------------------------------------------------------------*/
-.resume .resume-title {
-    font-size: 26px;
+.resume {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+}
+
+.resume .section-title {
+    margin-bottom: 50px;
+}
+
+.resume .section-title h2 {
+    font-size: 42px;
     font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #050d18;
+    color: #2c3e50;
+    margin-bottom: 15px;
 }
 
-.resume .resume-item {
-    padding: 0 0 20px 20px;
-    margin-top: -2px;
-    border-left: 2px solid #1f5297;
-    position: relative;
-}
-
-.resume .resume-item h4 {
-    line-height: 18px;
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-    color: #050d18;
-    margin-bottom: 10px;
-}
-
-.resume .resume-item h5 {
+.resume .section-title p {
     font-size: 16px;
-    background: #e4edf9;
-    padding: 5px 15px;
-    display: inline-block;
-    font-weight: 600;
-    margin-bottom: 10px;
+    color: #555;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.resume .resume-item ul {
-    padding-left: 20px;
+/* Resume Title */
+.resume .resume-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-family: "Raleway", sans-serif;
+    position: relative;
+    padding-bottom: 15px;
 }
 
-.resume .resume-item ul li {
-    padding-bottom: 10px;
+.resume .resume-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #0563bb 0%, #067ded 100%);
+    border-radius: 2px;
 }
 
-.resume .resume-item:last-child {
-    padding-bottom: 0;
+/* Resume Item */
+.resume .resume-item {
+    padding: 0 0 30px 30px;
+    margin-top: -2px;
+    border-left: 3px solid #0563bb;
+    position: relative;
+    background: #fff;
+    border-radius: 0 15px 15px 0;
+    margin-bottom: 25px;
+    padding: 25px 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.resume .resume-item:hover {
+    transform: translateX(8px);
+    box-shadow: 0 10px 30px rgba(5, 99, 187, 0.15);
+    border-left-color: #067ded;
 }
 
 .resume .resume-item::before {
     content: "";
     position: absolute;
-    width: 16px;
-    height: 16px;
-    border-radius: 50px;
-    left: -9px;
-    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    left: -12px;
+    top: 25px;
     background: #fff;
-    border: 2px solid #1f5297;
+    border: 3px solid #0563bb;
+    box-shadow: 0 3px 10px rgba(5, 99, 187, 0.3);
+    transition: all 0.3s ease;
+}
+
+.resume .resume-item:hover::before {
+    background: linear-gradient(135deg, #0563bb 0%, #067ded 100%);
+    border-color: #067ded;
+    transform: scale(1.2);
+}
+
+.resume .resume-item h4 {
+    line-height: 1.4;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.resume .resume-item h5 {
+    font-size: 15px;
+    background: linear-gradient(135deg, rgba(5, 99, 187, 0.1) 0%, rgba(6, 125, 237, 0.1) 100%);
+    padding: 8px 18px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 15px;
+    border-radius: 50px;
+    color: #0563bb;
+    border: 2px solid rgba(5, 99, 187, 0.2);
+    transition: all 0.3s ease;
+}
+
+.resume .resume-item:hover h5 {
+    background: linear-gradient(135deg, #0563bb 0%, #067ded 100%);
+    color: #fff;
+    border-color: #0563bb;
+}
+
+.resume .resume-item p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.resume .resume-item p em {
+    color: #0563bb;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.resume .resume-item ul {
+    padding-left: 25px;
+    margin-top: 15px;
+}
+
+.resume .resume-item ul li {
+    padding-bottom: 12px;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    position: relative;
+}
+
+.resume .resume-item ul li::marker {
+    color: #0563bb;
+    font-weight: bold;
+}
+
+.resume .resume-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Special styling for first resume item (Summary) */
+.resume .resume-item.pb-0 {
+    background: linear-gradient(135deg, rgba(5, 99, 187, 0.05) 0%, rgba(6, 125, 237, 0.05) 100%);
+    border-left-color: #067ded;
+}
+
+.resume .resume-item.pb-0::before {
+    background: linear-gradient(135deg, #0563bb 0%, #067ded 100%);
+    border-color: #067ded;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .resume {
+        padding: 60px 0;
+    }
+
+    .resume .section-title h2 {
+        font-size: 32px;
+    }
+
+    .resume .resume-title {
+        font-size: 24px;
+    }
+
+    .resume .resume-item {
+        padding: 20px 20px;
+        margin-bottom: 20px;
+    }
+
+    .resume .resume-item h4 {
+        font-size: 18px;
+    }
+
+    .resume .resume-item h5 {
+        font-size: 14px;
+        padding: 6px 14px;
+    }
 }

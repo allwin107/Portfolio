@@ -39,6 +39,7 @@
 }
 
 /* Bio/About Section Enhancements */
+/* Bio/About Section Enhancements */
 .bio-content {
     margin-top: 10px;
 }
@@ -56,11 +57,49 @@
     transform: scale(1.02);
 }
 
+/* About Card (Matches Social Proof) */
+.about-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+}
+
+.about-card .card-header {
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(135deg, #149ddd 0%, #00d9ff 100%);
+}
+
+.about-card .card-header i {
+    font-size: 28px;
+}
+
+.about-card .card-header h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.about-card .card-content {
+    padding: 30px;
+}
+
 .bio-intro {
     font-size: 16px;
     line-height: 1.8;
     color: #444444;
-    margin-bottom: 30px;
+    margin-bottom: 0;
     text-align: justify;
 }
 

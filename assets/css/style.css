@@ -1254,6 +1254,7 @@ section {
 }
 
 /* Bio/About Section Enhancements */
+/* Bio/About Section Enhancements */
 .bio-content {
     margin-top: 10px;
 }
@@ -1271,11 +1272,49 @@ section {
     transform: scale(1.02);
 }
 
+/* About Card (Matches Social Proof) */
+.about-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+}
+
+.about-card .card-header {
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(135deg, #149ddd 0%, #00d9ff 100%);
+}
+
+.about-card .card-header i {
+    font-size: 28px;
+}
+
+.about-card .card-header h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.about-card .card-content {
+    padding: 30px;
+}
+
 .bio-intro {
     font-size: 16px;
     line-height: 1.8;
     color: #444444;
-    margin-bottom: 30px;
+    margin-bottom: 0;
     text-align: justify;
 }
 
@@ -2110,22 +2149,52 @@ img[alt=""] {
     padding-bottom: 130px;
 }
 
-.contact .contact-info-box {
-    padding: 30px;
+/* Contact Card Styling (Matches Premium CSS) */
+.contact-card {
     background: #fff;
-    width: 100%;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-    border-radius: 16px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
     transition: transform 0.3s ease;
-    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
-.contact .contact-info-box:hover {
+.contact-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card .card-header {
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-card .card-header i {
+    font-size: 28px;
+}
+
+.contact-card .card-header h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contact-card .card-content {
+    padding: 30px;
+}
+
+/* Specific Card Headers */
+.info-card .card-header {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    /* Teal gradient */
+}
+
+.form-card .card-header {
+    background: linear-gradient(135deg, #1fa2ff 0%, #12d8fa 100%);
+    /* Blue-Cyan gradient */
 }
 
 .contact .info-content-wrapper {
@@ -2171,6 +2240,12 @@ img[alt=""] {
     color: #fff;
 }
 
+.contact .content {
+    flex: 1;
+    min-width: 0;
+    /* Critical for flex child text wrapping */
+}
+
 .contact .content h4 {
     font-size: 18px;
     font-weight: 700;
@@ -2185,8 +2260,8 @@ img[alt=""] {
     font-size: 14px;
     color: #444;
     line-height: 1.5;
-    word-break: break-word;
-    /* Ensure long emails wrap */
+    word-wrap: break-word;
+    /* Better than break-word */
 }
 
 .contact .content p a {
@@ -2221,14 +2296,14 @@ img[alt=""] {
     background: linear-gradient(135deg, #149ddd 0%, #0077b5 100%);
     color: #fff;
     border-radius: 50px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(20, 157, 221, 0.3);
-    width: 100%;
-    white-space: nowrap;
-    /* Prevent text wrapping */
+    width: auto;
+    min-width: 200px;
+    max-width: 100%;
 }
 
 .contact .btn-resume:hover {
@@ -2292,14 +2367,9 @@ img[alt=""] {
 }
 
 /* Form Styles */
+/* Form Styles Refined */
 .contact .php-email-form {
     width: 100%;
-    padding: 30px;
-    background: #fff;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-    border-radius: 16px;
-    height: 100%;
-    box-sizing: border-box;
 }
 
 .contact .php-email-form .form-group {

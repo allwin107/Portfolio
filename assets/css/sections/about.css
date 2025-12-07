@@ -47,6 +47,9 @@
     border-radius: 10px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .bio-image img:hover {
@@ -56,9 +59,25 @@
 .bio-intro {
     font-size: 16px;
     line-height: 1.8;
-    color: #272829;
-    margin-bottom: 20px;
+    color: #444444;
+    margin-bottom: 30px;
     text-align: justify;
+}
+
+.image-wrapper {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.image-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    height: 20px;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+    z-index: -1;
 }
 
 .bio-highlights {
@@ -68,7 +87,7 @@
 .bio-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    gap: 20px;
 }
 
 @media (max-width: 767px) {
@@ -81,19 +100,21 @@
     display: flex;
     align-items: flex-start;
     gap: 15px;
-    padding: 15px;
-    background: #f8f9fa;
-    border-radius: 8px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
     margin-bottom: 0;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border-left: 4px solid #149ddd;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     height: 100%;
 }
 
 .highlight-item:hover {
-    background: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transform: translateX(5px);
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(20, 157, 221, 0.15);
+    transform: translateY(-5px);
+    border-left-color: #37b3ed;
 }
 
 .highlight-icon {
@@ -138,7 +159,7 @@
     }
 
     .bio-image img {
-        max-width: 400px;
+        max-width: 100%;
         margin: 0 auto;
     }
 }

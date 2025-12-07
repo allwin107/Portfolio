@@ -172,7 +172,7 @@
 }
 
 .hero-name .name-highlight {
-    background: linear-gradient(135deg, #00d4ff 0%, #00a8ff 100%);
+    background: linear-gradient(135deg, #0563bb 0%, #067ded 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -194,7 +194,7 @@
 }
 
 .typing-text {
-    color: #00d4ff;
+    color: #0563bb;
     text-shadow: 0 3px 15px rgba(0, 212, 255, 0.8), 0 1px 5px rgba(0, 212, 255, 0.5);
 }
 
@@ -230,7 +230,7 @@
 }
 
 .hero-description strong {
-    color: #00d4ff;
+    color: #0563bb;
     font-weight: 700;
     text-shadow: 0 2px 10px rgba(0, 212, 255, 0.5);
 }
@@ -261,14 +261,14 @@
 
 .feature-tag:hover {
     background: rgba(0, 212, 255, 0.3);
-    border-color: #00d4ff;
+    border-color: #0563bb;
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 212, 255, 0.4);
 }
 
 .feature-tag i {
     font-size: 20px;
-    color: #00d4ff;
+    color: #0563bb;
 }
 
 /* CTA Buttons */

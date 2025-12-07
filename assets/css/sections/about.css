@@ -53,7 +53,7 @@
     overflow: hidden;
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #0563bb 0%, #067ded 100%);
     padding: 8px;
 }
 
@@ -64,7 +64,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%);
+    background: linear-gradient(135deg, rgba(5, 99, 187, 0.3) 0%, rgba(6, 125, 237, 0.3) 100%);
     opacity: 0;
     transition: opacity 0.4s ease;
     z-index: 1;
@@ -77,7 +77,7 @@
 
 .about .image-wrapper:hover {
     transform: translateY(-10px);
-    box-shadow: 0 25px 70px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 25px 70px rgba(5, 99, 187, 0.4);
 }
 
 .about .image-wrapper img {
@@ -106,7 +106,7 @@
 
 .about .about-card .card-header {
     padding: 25px 35px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #0563bb 0%, #067ded 100%);
     color: #fff;
     display: flex;
     align-items: center;
@@ -163,7 +163,7 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(90deg, #0563bb 0%, #764ba2 100%);
     transform: scaleX(0);
     transition: transform 0.4s ease;
 }
@@ -174,28 +174,28 @@
 
 .about .highlight-card:hover {
     transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 20px 50px rgba(102, 126, 234, 0.25);
-    border-color: rgba(102, 126, 234, 0.3);
+    box-shadow: 0 20px 50px rgba(5, 99, 187, 0.25);
+    border-color: rgba(5, 99, 187, 0.3);
 }
 
 .about .highlight-icon {
     width: 80px;
     height: 80px;
     margin: 0 auto 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #0563bb 0%, #067ded 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 40px;
     color: #fff;
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 8px 25px rgba(5, 99, 187, 0.3);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .about .highlight-card:hover .highlight-icon {
     transform: scale(1.15) rotate(10deg);
-    box-shadow: 0 12px 35px rgba(102, 126, 234, 0.5);
+    box-shadow: 0 12px 35px rgba(5, 99, 187, 0.5);
 }
 
 .about .highlight-title {
@@ -216,7 +216,7 @@
 .about .highlight-number {
     font-size: 36px;
     font-weight: 800;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #0563bb 0%, #067ded 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -237,12 +237,12 @@
     align-items: center;
     gap: 10px;
     padding: 12px 20px;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(5, 99, 187, 0.1) 0%, rgba(6, 125, 237, 0.1) 100%);
     border-radius: 50px;
     font-size: 14px;
     font-weight: 600;
-    color: #667eea;
-    border: 2px solid rgba(102, 126, 234, 0.2);
+    color: #0563bb;
+    border: 2px solid rgba(5, 99, 187, 0.2);
     transition: all 0.3s ease;
 }
 
@@ -251,20 +251,20 @@
 }
 
 .about .info-pill:hover {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #0563bb 0%, #067ded 100%);
     color: #fff;
-    border-color: #667eea;
+    border-color: #0563bb;
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 8px 20px rgba(5, 99, 187, 0.3);
 }
 
 /* CTA Section */
 .about .about-cta {
     text-align: center;
     padding: 60px 40px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #0563bb 0%, #067ded 100%);
     border-radius: 25px;
-    box-shadow: 0 15px 50px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 15px 50px rgba(5, 99, 187, 0.3);
     position: relative;
     overflow: hidden;
 }
@@ -336,14 +336,14 @@
 
 .about .btn-cta-primary {
     background: #fff;
-    color: #667eea;
+    color: #0563bb;
     box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
 }
 
 .about .btn-cta-primary:hover {
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 12px 35px rgba(255, 255, 255, 0.5);
-    color: #667eea;
+    color: #0563bb;
 }
 
 .about .btn-cta-secondary {

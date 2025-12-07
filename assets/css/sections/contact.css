@@ -99,11 +99,11 @@
 
 /* Card Header Colors */
 .info-card .card-header {
-    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    background: linear-gradient(135deg, #0563bb 0%, #067ded 100%);
 }
 
 .form-card .card-header {
-    background: linear-gradient(135deg, #1fa2ff 0%, #12d8fa 100%);
+    background: linear-gradient(135deg, #0563bb 0%, #067ded 100%);
 }
 
 /* Contact Info Items */
@@ -137,7 +137,7 @@
     width: 56px;
     height: 56px;
     min-width: 56px;
-    background: linear-gradient(135deg, #149ddd 0%, #37b3ed 100%);
+    background: linear-gradient(135deg, #0563bb 0%, #067ded 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -214,7 +214,7 @@
     justify-content: center;
     gap: 14px;
     padding: 16px 36px;
-    background: linear-gradient(135deg, #149ddd 0%, #0077b5 100%);
+    background: linear-gradient(135deg, #0563bb 0%, #044a99 100%);
     color: #fff;
     border-radius: 50px;
     font-size: 17px;
@@ -313,7 +313,7 @@
 }
 
 .contact .social-link.linkedin::before {
-    background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+    background: linear-gradient(135deg, #0563bb 0%, #067ded 100%);
 }
 
 .contact .social-link.linkedin:hover {
@@ -401,7 +401,7 @@
 }
 
 .contact .php-email-form button[type=submit] {
-    background: linear-gradient(135deg, #149ddd 0%, #0077b5 100%);
+    background: linear-gradient(135deg, #0563bb 0%, #044a99 100%);
     border: 0;
     padding: 18px 50px;
     color: #fff;
@@ -434,7 +434,7 @@
 }
 
 .contact .php-email-form button[type=submit]:hover {
-    background: linear-gradient(135deg, #0077b5 0%, #149ddd 100%);
+    background: linear-gradient(135deg, #044a99 0%, #0563bb 100%);
     transform: translateY(-4px) scale(1.02);
     box-shadow: 0 12px 40px rgba(20, 157, 221, 0.5);
 }

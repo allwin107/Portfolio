@@ -33,11 +33,14 @@
     margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# Bio/About Section Enhancements
---------------------------------------------------------------*/
+/* Reduced whitespace for section title */
+.about .section-title {
+    padding-bottom: 20px;
+}
+
+/* Bio/About Section Enhancements */
 .bio-content {
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .bio-image img {
@@ -54,24 +57,37 @@
     font-size: 16px;
     line-height: 1.8;
     color: #272829;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-align: justify;
 }
 
 .bio-highlights {
-    margin-top: 30px;
+    margin-top: 20px;
+}
+
+.bio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+@media (max-width: 767px) {
+    .bio-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .highlight-item {
     display: flex;
     align-items: flex-start;
     gap: 15px;
-    padding: 20px;
+    padding: 15px;
     background: #f8f9fa;
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     transition: all 0.3s ease;
     border-left: 4px solid #149ddd;
+    height: 100%;
 }
 
 .highlight-item:hover {

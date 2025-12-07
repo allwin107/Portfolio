@@ -638,21 +638,28 @@ ${JSON.stringify(project.apiExample.request, null, 2)}</code></pre>
 }
 
 /**
- * Render project cards with case study sections
+ * Render project cards with compact UI and modal functionality
  */
 function renderProjects(projects) {
   const container = document.getElementById('projectsContainer');
   if (!container) return;
+
+  // Store projects globally for modal access
+  window.projectsData = projects;
 
   let html = '';
 
   projects.forEach((project, index) => {
     const delay = index * 100;
 
-    // Build technology tags
-    const techTags = project.technologies.map(tech =>
+    // Build technology tags (show max 5)
+    const allTechTags = project.technologies;
+    const visibleTechTags = allTechTags.slice(0, 5).map(tech =>
       `<span class="tech-tag">${tech}</span>`
     ).join('');
+
+    const moreCount = allTechTags.length > 5 ? allTechTags.length - 5 : 0;
+    const moreIndicator = moreCount > 0 ? `<span class="tech-more-indicator">+${moreCount} more</span>` : '';
 
     // Build project links
     const links = [];
@@ -667,17 +674,20 @@ function renderProjects(projects) {
       </a>`);
     }
 
-    // Render visual assets with conditional rendering
-    const visualAssets = renderVisualAssets(project);
+    // Add View Details button
+    links.push(`<button class="btn-details" onclick="openProjectModal('${project.id}')" aria-label="View full details for ${project.title}">
+      <i class="bi bi-info-circle"></i> View Details
+    </button>`);
 
-    // Featured badge
+    // Render visual assets
+    const visualAssets = renderVisualAssets(project);
     const featuredBadge = project.featured ? '<span class="badge-featured">Featured</span>' : '';
 
-    // Render project-specific demonstrations
-    const demonstrationHtml = renderDemonstration(project);
-
+    // Compact Card Structure
     html += `
-      <div class="project-card" data-aos="fade-up" data-aos-delay="${delay}">
+      <div class="project-card" data-aos="fade-up" data-aos-delay="${delay}" data-project-id="${project.id}">
+        
+        <!-- Visual Header -->
         <div class="project-visual">
           ${visualAssets.html}
           <div class="project-badges">
@@ -686,40 +696,16 @@ function renderProjects(projects) {
             ${project.liveDemo ? '<span class="badge-live">Live Demo</span>' : ''}
           </div>
         </div>
+
+        <!-- Card Content (Compact) -->
         <div class="project-content">
           <h3 class="project-title">${project.title}</h3>
           <p class="project-summary">${project.summary}</p>
           
-          <div class="project-section">
-            <h4><i class="bi bi-exclamation-circle"></i> Problem</h4>
-            <p>${project.problem}</p>
+          <div class="tech-tags">
+            ${visibleTechTags}
+            ${moreIndicator}
           </div>
-          
-          <div class="project-section">
-            <h4><i class="bi bi-lightbulb"></i> Solution</h4>
-            <p>${project.solution}</p>
-          </div>
-          
-          <div class="project-section">
-            <h4><i class="bi bi-tools"></i> Technologies</h4>
-            <div class="tech-tags">
-              ${techTags}
-            </div>
-          </div>
-          
-          <div class="project-section">
-            <h4><i class="bi bi-graph-up"></i> Results & Impact</h4>
-            <p>${project.results}</p>
-          </div>
-          
-          ${demonstrationHtml}
-          
-          ${project.learnings ? `
-          <div class="project-section">
-            <h4><i class="bi bi-book"></i> Key Learnings</h4>
-            <p>${project.learnings}</p>
-          </div>
-          ` : ''}
           
           <div class="project-links">
             ${links.join('')}
@@ -733,6 +719,9 @@ function renderProjects(projects) {
 
   // Initialize lazy loading observer
   initializeLazyLoading();
+
+  // Initialize modal listeners
+  initializeModalListeners();
 
   // Refresh AOS animations if available
   if (typeof AOS !== 'undefined') {

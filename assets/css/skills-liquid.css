@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
-# Skills Section - Liquid Glassmorphism Theme
+# Skills Section - Professional Clean Theme
 --------------------------------------------------------------*/
 
 .skills .skills-grid {
@@ -10,50 +10,30 @@
 }
 
 .skills .skill-category {
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: #ffffff;
     padding: 30px;
-    border-radius: 20px;
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--glass-shadow), 0 0 20px rgba(0, 217, 255, 0.1);
-    transition: all var(--transition-slow);
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
     position: relative;
-    overflow: hidden;
-}
-
-.skills .skill-category::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(0, 217, 255, 0.1) 0%, transparent 70%);
-    opacity: 0;
-    transition: opacity var(--transition-slow);
 }
 
 .skills .skill-category:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--glass-shadow), 0 0 40px rgba(0, 217, 255, 0.3);
-    border-color: var(--liquid-primary);
-}
-
-.skills .skill-category:hover::before {
-    opacity: 1;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(5, 99, 187, 0.15);
+    border-color: #0563bb;
 }
 
 .skills .category-title {
     font-size: 22px;
     font-weight: 700;
-    color: var(--liquid-primary);
+    color: #0563bb;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
     gap: 12px;
     font-family: "Poppins", sans-serif;
-    text-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
 }
 
 .skills .category-icon {
@@ -70,22 +50,21 @@
 .skills .skill-tag {
     display: inline-block;
     padding: 10px 18px;
-    background: rgba(0, 217, 255, 0.1);
-    color: var(--liquid-primary-dark);
+    background: #e8f2ff;
+    color: #0563bb;
     border-radius: 25px;
     font-size: 14px;
     font-weight: 600;
-    transition: all var(--transition-normal);
-    border: 1px solid rgba(0, 217, 255, 0.2);
-    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    border: 1px solid #d1e7ff;
 }
 
 .skills .skill-tag:hover {
-    background: var(--liquid-primary);
+    background: #0563bb;
     color: #ffffff;
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 20px var(--liquid-glow);
-    border-color: var(--liquid-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(5, 99, 187, 0.3);
+    border-color: #0563bb;
 }
 
 /* Responsive */

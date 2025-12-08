@@ -1,31 +1,39 @@
 /*--------------------------------------------------------------
-# Liquid Theme - CSS Custom Properties
-# Modular file for theme colors and variables
+# Professional Theme - CSS Custom Properties
+# Standard professional color palette and variables
 --------------------------------------------------------------*/
 
 :root {
-    /* Liquid Theme Colors - Cyan/Teal Palette */
-    --liquid-primary: #00d9ff;
-    --liquid-primary-dark: #00b8d4;
-    --liquid-primary-light: #4df0ff;
-    --liquid-secondary: #00ffcc;
-    --liquid-accent: #0af;
-    --liquid-glow: rgba(0, 217, 255, 0.5);
+    /* Professional Theme Colors */
+    --theme-primary: #0563bb;
+    --theme-primary-dark: #044a99;
+    --theme-primary-light: #0d76dd;
+    --theme-secondary: #149ddd;
+    --theme-accent: #067ded;
 
-    /* Dark Theme Colors */
-    --dark-bg: #0a1628;
-    --dark-bg-secondary: #0f1f35;
-    --dark-surface: rgba(15, 31, 53, 0.8);
-
-    /* Glass Effect */
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    /* Background Colors */
+    --bg-white: #ffffff;
+    --bg-light: #f8f9fa;
+    --bg-gray: #f3f4f6;
+    --bg-dark: #040b14;
+    --bg-dark-secondary: #0a1628;
 
     /* Text Colors */
-    --text-primary: #ffffff;
-    --text-secondary: #b8c5d6;
-    --text-muted: #8a9bb0;
+    --text-primary: #272829;
+    --text-secondary: #45505b;
+    --text-muted: #6b7280;
+    --text-light: #ffffff;
+
+    /* Border Colors */
+    --border-light: #e5e7eb;
+    --border-medium: #d1d5db;
+    --border-dark: #9ca3af;
+
+    /* Shadows - Standard (no glows) */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 
     /* Spacing */
     --section-padding: 80px;

@@ -114,7 +114,8 @@ export default function Projects() {
             description: 'Next.js application for idea generation and project management',
             technologies: ['Next.js', 'React', 'JavaScript', 'Web App'],
             category: 'fullstack',
-            github: 'https://github.com/allwin107/IdeaForge'
+            github: 'https://github.com/allwin107/IdeaForge',
+            liveDemo: 'https://idea-forge-brown.vercel.app/'
         },
         // Tools & Utilities (3)
         {

@@ -1,0 +1,95 @@
+.contactContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--spacing-3xl);
+}
+
+.contactInfo h3 {
+    color: var(--color-primary);
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.contactText {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.7;
+}
+
+.infoItems {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.infoItem {
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: white;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.infoItem svg {
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.infoItem h4 {
+    font-size: var(--font-size-sm);
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.infoItem p,
+.infoItem a {
+    color: var(--color-text);
+    margin: 0;
+    font-size: var(--font-size-base);
+}
+
+.infoItem a:hover {
+    color: var(--color-primary);
+}
+
+.contactForm {
+    background: white;
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.statusMessage {
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-lg);
+    font-weight: 500;
+}
+
+.statusMessage.success {
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #6ee7b7;
+}
+
+.statusMessage.error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+}
+
+@media (max-width: 768px) {
+    .contactContainer {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .contactForm {
+        padding: var(--spacing-lg);
+    }
+}

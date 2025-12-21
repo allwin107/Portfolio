@@ -1,0 +1,150 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+    padding: var(--spacing-3xl) 0;
+}
+
+.heroContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-3xl);
+    align-items: center;
+}
+
+.heroText {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.name {
+    font-size: var(--font-size-5xl);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--spacing-sm);
+}
+
+.title {
+    font-size: var(--font-size-2xl);
+    color: var(--color-secondary);
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+}
+
+.tagline {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.8;
+}
+
+.contactInfo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.contactLink {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-md);
+    background: white;
+    border-radius: var(--radius-md);
+    color: var(--color-text);
+    font-size: var(--font-size-sm);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.contactLink:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+    color: var(--color-primary);
+}
+
+.cta {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.heroImage {
+    display: flex;
+    justify-content: center;
+    animation: fadeIn 1s ease-out;
+}
+
+.profileImg {
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.profileImg:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .heroContent {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .heroImage {
+        order: -1;
+    }
+
+    .profileImg {
+        width: 250px;
+        height: 250px;
+    }
+
+    .name {
+        font-size: var(--font-size-4xl);
+    }
+
+    .title {
+        font-size: var(--font-size-xl);
+    }
+
+    .contactInfo {
+        flex-direction: column;
+    }
+
+    .contactLink {
+        justify-content: center;
+    }
+}

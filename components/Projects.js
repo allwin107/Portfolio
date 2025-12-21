@@ -6,86 +6,144 @@ export default function Projects() {
     const [activeFilter, setActiveFilter] = useState('all')
 
     const projects = [
-        // AI & NLP Projects
+        // AI & NLP Projects (6)
         {
             title: 'Realtime AI Backend',
-            description: 'High-performance asynchronous Python backend for real-time AI conversations with WebSocket communication, function calling, and streaming responses',
-            technologies: ['FastAPI', 'WebSocket', 'Supabase', 'Groq', 'LLM Function Calling', 'Python'],
+            description: 'High-performance asynchronous Python backend for real-time AI conversations with WebSocket communication and function calling',
+            technologies: ['FastAPI', 'WebSocket', 'Supabase', 'Groq', 'Python'],
             category: 'ai-nlp',
             github: 'https://github.com/allwin107/Realtime-AI-Backend'
         },
         {
+            title: 'Tamil Voice Conversation System',
+            description: 'End-to-end Tamil language AI toolkit combining ASR, LLM, and TTS for natural voice-based conversations',
+            technologies: ['ASR', 'LLM', 'TTS', 'Tamil NLP', 'Python'],
+            category: 'ai-nlp',
+            github: 'https://github.com/allwin107/ASR-LLM-TTS-Tamil-Lang'
+        },
+        {
             title: 'AI Voice Agent',
-            description: 'Real-time multilingual conversational voice assistant with sub-second latency, enabling seamless voice-to-voice interactions',
-            technologies: ['LLaMA 3 (Groq)', 'ElevenLabs TTS', 'Deepgram STT', 'Flask APIs', 'Python'],
+            description: 'Real-time multilingual conversational voice assistant with sub-second latency and seamless interactions',
+            technologies: ['LLaMA 3', 'ElevenLabs TTS', 'Deepgram STT', 'Flask'],
             category: 'ai-nlp',
             github: 'https://github.com/allwin107/AI-Voice-Agent'
         },
         {
             title: 'HSN Code Validation AI Agent',
-            description: 'NLP-powered chatbot for accurate HSN code classification and validation using natural language processing',
-            technologies: ['SpaCy', 'NLP', 'Excel Integration', 'Python', 'Machine Learning'],
+            description: 'NLP-powered chatbot for accurate HSN code classification using natural language processing',
+            technologies: ['SpaCy', 'NLP', 'Python', 'Machine Learning'],
             category: 'ai-nlp',
             github: 'https://github.com/allwin107/HSN-Code-Validation'
         },
         {
+            title: 'Local Chatbot',
+            description: 'Simple local chatbot application for conversational AI interactions without cloud dependencies',
+            technologies: ['Python', 'NLP', 'Local LLM', 'Chatbot'],
+            category: 'ai-nlp',
+            github: 'https://github.com/allwin107/Local_Chatbot'
+        },
+        {
             title: 'PII Detection Email Classifier',
-            description: 'ML-based NLP classifier for detecting and protecting sensitive personal information in email communications',
-            technologies: ['TF-IDF', 'Scikit-learn', 'NLP', 'Supervised Learning', 'Python'],
+            description: 'ML-based NLP classifier for detecting sensitive personal information in email communications',
+            technologies: ['TF-IDF', 'Scikit-learn', 'NLP', 'Python'],
             category: 'ai-nlp',
             github: 'https://github.com/allwin107/PII-Detection-Email-Classifier'
         },
-        // ML & Predictive Analytics
+        // ML & Predictive Analytics (5)
         {
             title: 'Diabetes Prediction',
-            description: 'Machine learning model using Support Vector Machine (SVM) to predict diabetes likelihood based on health parameters',
-            technologies: ['SVM', 'Scikit-learn', 'Python', 'Pandas', 'NumPy'],
+            description: 'SVM-based machine learning model predicting diabetes likelihood from health parameters',
+            technologies: ['SVM', 'Scikit-learn', 'Python', 'Pandas'],
             category: 'ml-analytics',
             github: 'https://github.com/allwin107/Diabetes-Prediction-using-Machine-Learning'
         },
         {
             title: 'Financial Fraud Detection',
-            description: 'Advanced ML solution for detecting fraudulent transactions in financial systems using classification algorithms',
-            technologies: ['Machine Learning', 'Classification', 'Python', 'Scikit-learn', 'Data Analysis'],
+            description: 'Advanced ML solution detecting fraudulent transactions using classification algorithms',
+            technologies: ['Machine Learning', 'Classification', 'Python', 'Scikit-learn'],
             category: 'ml-analytics',
             github: 'https://github.com/allwin107/Financial-Fraud-Detection'
         },
         {
             title: 'House Price Prediction',
-            description: 'Regression model predicting California house prices using XGBoost with comprehensive EDA and feature engineering',
-            technologies: ['XGBoost', 'Regression', 'Python', 'Pandas', 'Matplotlib'],
+            description: 'XGBoost regression model predicting California house prices with comprehensive EDA',
+            technologies: ['XGBoost', 'Regression', 'Python', 'Pandas'],
             category: 'ml-analytics',
             github: 'https://github.com/allwin107/House-Price-Prediction-using-XGBoost-and-California-Housing-Dataset'
         },
         {
             title: 'SONAR Rock vs Mine Prediction',
-            description: 'Classification model predicting whether SONAR signals are from rocks or mines using supervised learning',
-            technologies: ['Classification', 'Scikit-learn', 'Python', 'Machine Learning', 'UCI Dataset'],
+            description: 'Classification model predicting SONAR signal sources using supervised learning',
+            technologies: ['Classification', 'Scikit-learn', 'Python', 'ML'],
             category: 'ml-analytics',
             github: 'https://github.com/allwin107/SONAR-Rock-vs-Mine-Prediction'
         },
-        // Data Analysis
         {
             title: 'Stock Market Crash 2008 Analysis',
-            description: 'Comprehensive analysis of the 2008 financial crisis impact on stock indices, exploring volatility and market dynamics',
-            technologies: ['Data Analysis', 'Python', 'Pandas', 'Matplotlib', 'Financial Analysis'],
-            category: 'data-analysis',
+            description: 'Comprehensive analysis of 2008 financial crisis impact on stock indices and volatility',
+            technologies: ['Data Analysis', 'Python', 'Pandas', 'Matplotlib'],
+            category: 'ml-analytics',
             github: 'https://github.com/allwin107/Stock-Market-Crash-2008-Insights'
+        },
+        // Full-Stack Applications (4)
+        {
+            title: 'FastDoc - AI Document Processing',
+            description: 'Intelligent document processing system with AI extraction, human verification, and Excel export',
+            technologies: ['AI', 'OCR', 'Flask', 'React', 'Excel'],
+            category: 'fullstack',
+            github: 'https://github.com/allwin107/FastDoc--AI_Powered_Document_Processing_System'
+        },
+        {
+            title: 'Email Classifier Pro',
+            description: 'Enterprise email classification system with PII detection and advanced categorization',
+            technologies: ['NLP', 'Flask', 'React', 'Classification', 'PII'],
+            category: 'fullstack',
+            github: 'https://github.com/allwin107/email-classifier-pro'
+        },
+        {
+            title: 'Loan Prediction Web App',
+            description: 'Flask-based web app using Random Forest to predict loan approval with responsive UI',
+            technologies: ['Flask', 'Random Forest', 'HTML/CSS', 'Python'],
+            category: 'fullstack',
+            github: 'https://github.com/allwin107/Loan-Prediction-Web-App'
+        },
+        {
+            title: 'IdeaForge',
+            description: 'Next.js application for idea generation and project management',
+            technologies: ['Next.js', 'React', 'JavaScript', 'Web App'],
+            category: 'fullstack',
+            github: 'https://github.com/allwin107/IdeaForge'
+        },
+        // Tools & Utilities (3)
+        {
+            title: 'Live OCR Camera Feed',
+            description: 'Real-time OCR system capturing live video and extracting text using Tesseract and OpenCV',
+            technologies: ['Tesseract', 'OpenCV', 'Python', 'OCR'],
+            category: 'tools',
+            github: 'https://github.com/allwin107/Live-OCR-Camera-Feed-with-Tesseract-and-OpenCV'
         },
         {
             title: 'Fantasy Team Simulation',
-            description: 'Probability-based simulation generating 20,000 unique fantasy cricket teams using player selection probabilities',
-            technologies: ['Python', 'Probability', 'Simulation', 'Data Analysis', 'Algorithm Design'],
-            category: 'data-analysis',
+            description: 'Probability-based simulation generating 20,000 unique fantasy cricket teams',
+            technologies: ['Python', 'Probability', 'Simulation', 'Algorithm'],
+            category: 'tools',
             github: 'https://github.com/allwin107/Fantasy-Team-Simulation-using-Player-Selection-Probabilities'
+        },
+        {
+            title: 'Simple Calculator',
+            description: 'GUI calculator application built with Tkinter for basic arithmetic operations',
+            technologies: ['Python', 'Tkinter', 'GUI', 'Desktop App'],
+            category: 'tools',
+            github: 'https://github.com/allwin107/Simple-Calculator-with-Tkinter'
         }
     ]
 
     const categories = [
-        { id: 'all', label: 'All Projects', count: projects.length },
-        { id: 'ai-nlp', label: 'AI & NLP', count: projects.filter(p => p.category === 'ai-nlp').length },
-        { id: 'ml-analytics', label: 'ML & Predictive Analytics', count: projects.filter(p => p.category === 'ml-analytics').length },
-        { id: 'data-analysis', label: 'Data Analysis', count: projects.filter(p => p.category === 'data-analysis').length }
+        { id: 'all', label: 'All Projects', count: projects.length, icon: '📁' },
+        { id: 'ai-nlp', label: 'AI & NLP', count: projects.filter(p => p.category === 'ai-nlp').length, icon: '🤖' },
+        { id: 'ml-analytics', label: 'ML & Analytics', count: projects.filter(p => p.category === 'ml-analytics').length, icon: '📊' },
+        { id: 'fullstack', label: 'Full-Stack Apps', count: projects.filter(p => p.category === 'fullstack').length, icon: '💼' },
+        { id: 'tools', label: 'Tools & Utilities', count: projects.filter(p => p.category === 'tools').length, icon: '🔧' }
     ]
 
     const filteredProjects = activeFilter === 'all'
@@ -104,13 +162,14 @@ export default function Projects() {
                             className={`${styles.filterBtn} ${activeFilter === category.id ? styles.active : ''}`}
                             onClick={() => setActiveFilter(category.id)}
                         >
+                            <span className={styles.icon}>{category.icon}</span>
                             {category.label}
                             <span className={styles.count}>{category.count}</span>
                         </button>
                     ))}
                 </div>
 
-                <div className="grid grid-3">
+                <div className={`grid ${styles.projectGrid}`}>
                     {filteredProjects.map((project, index) => (
                         <div key={index} className={`card ${styles.projectCard}`}>
                             <div className={styles.projectHeader}>

@@ -68,7 +68,7 @@ export default function Contact() {
                                 </svg>
                                 <div>
                                     <h4>Email</h4>
-                                    <a href="mailto:allwinraja2002@gmail.com">allwinraja2002@gmail.com</a>
+                                    <a href="mailto:allwin10raja@gmail.com">allwin10raja@gmail.com</a>
                                 </div>
                             </div>
 
@@ -78,7 +78,7 @@ export default function Contact() {
                                 </svg>
                                 <div>
                                     <h4>Phone</h4>
-                                    <a href="tel:+919025014336">+91 9025014336</a>
+                                    <a href="tel:+919345696061">+91 9345696061</a>
                                 </div>
                             </div>
 

@@ -99,7 +99,8 @@ export default function Projects() {
             description: 'Enterprise email classification system with PII detection and advanced categorization',
             technologies: ['NLP', 'Flask', 'React', 'Classification', 'PII'],
             category: 'fullstack',
-            github: 'https://github.com/allwin107/email-classifier-pro'
+            github: 'https://github.com/allwin107/email-classifier-pro',
+            liveDemo: 'https://email-classifier-frontend-3n97.onrender.com/'
         },
         {
             title: 'Loan Prediction Web App',

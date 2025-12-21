@@ -76,7 +76,8 @@ export default function Projects() {
             description: 'Classification model predicting SONAR signal sources using supervised learning',
             technologies: ['Classification', 'Scikit-learn', 'Python', 'ML'],
             category: 'ml-analytics',
-            github: 'https://github.com/allwin107/SONAR-Rock-vs-Mine-Prediction'
+            github: 'https://github.com/allwin107/SONAR-Rock-vs-Mine-Prediction',
+            liveDemo: 'https://sonar-rock-vs-mine-prediction-six.vercel.app/'
         },
         {
             title: 'Stock Market Crash 2008 Analysis',

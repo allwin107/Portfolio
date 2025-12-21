@@ -3,6 +3,11 @@ import styles from './Projects.module.css'
 export default function Projects() {
     const projects = [
         {
+            title: 'Realtime AI Backend',
+            description: 'High-performance asynchronous Python backend for real-time AI conversations with WebSocket communication, function calling, streaming responses, and persistent storage using Supabase',
+            technologies: ['FastAPI', 'WebSocket', 'Supabase', 'Groq', 'LLM Function Calling', 'Python', 'Async/Await']
+        },
+        {
             title: 'AI Voice Agent',
             description: 'Real-time multilingual conversational voice assistant with sub-second latency, enabling seamless voice-to-voice interactions',
             technologies: ['LLaMA 3 (Groq)', 'ElevenLabs TTS', 'Deepgram STT', 'Flask APIs', 'Python']

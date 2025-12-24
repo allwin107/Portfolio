@@ -26,7 +26,9 @@ export default function Education() {
         'Programming for Everybody – Python (Coursera)',
         'Machine Learning with Python (FreeCodeCamp)',
         'Data Analysis with Python (FreeCodeCamp)',
-        'Database Management Essentials (Coursera)'
+        'Database Management Essentials (Coursera)',
+        'Introduction to Artificial Intelligence(Simplilearn)',
+        'Foundations: Data, Data, Everywhere(Google)',
     ]
 
     return (

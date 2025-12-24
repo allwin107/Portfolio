@@ -4,7 +4,7 @@ export default function About() {
     const highlights = [
         {
             title: 'Conversational AI & NLP',
-            description: 'Expert in building multilingual voice assistants and NLP-powered chatbots using LLMs and speech technologies'
+            description: 'Experienced in building multilingual voice assistants and NLP-powered chatbots using LLMs and speech technologies'
         },
         {
             title: 'Production-Grade ML Systems',
@@ -12,7 +12,7 @@ export default function About() {
         },
         {
             title: 'End-to-End AI Deployment',
-            description: 'Proficient in the complete ML lifecycle from data preprocessing to API development and deployment'
+            description: 'Experienced in the complete ML lifecycle from data preprocessing to API development and deployment'
         }
     ]
 
@@ -25,7 +25,7 @@ export default function About() {
                     <div className={styles.objective}>
                         <p>
                             Aspiring AI and Machine Learning Engineer with hands-on experience in developing
-                            production-grade AI systems, specializing in Conversational AI, NLP, and end-to-end
+                            production-grade AI systems, Experienced in Conversational AI, NLP, and end-to-end
                             ML deployment. Passionate about leveraging cutting-edge technologies to solve real-world
                             challenges and drive innovation in AI-powered solutions.
                         </p>

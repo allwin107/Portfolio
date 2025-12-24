@@ -1,118 +1,16 @@
-# Allwin Raja J - Portfolio Website
+# Portfolio Website
 
-A modern, responsive portfolio website showcasing AI/ML engineering experience, projects, and skills.
-
-## 🚀 Features
-
-- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
-- **Modern UI**: Clean, professional design with smooth animations
-- **SEO Optimized**: Proper meta tags and semantic HTML
-- **Contact Form**: Functional contact form with email integration
-- **Fast Performance**: Built with Next.js for optimal performance
-
-## 📋 Sections
-
-- **Hero**: Introduction with profile image and quick contact links
-- **About**: Professional objective and key highlights
-- **Experience**: Work history with detailed achievements
-- **Projects**: Showcase of AI/ML projects
-- **Skills**: Technical and soft skills
-- **Education**: Academic background and certifications
-- **Contact**: Contact form and information
-
-## 🛠️ Tech Stack
-
-- **Framework**: Next.js 14
-- **Styling**: CSS Modules with custom design system
-- **Email Service**: Resend (optional)
-- **Deployment**: Vercel (recommended)
-
-## 📦 Installation
-
-1. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-2. **Set up environment variables** (optional for contact form):
-   - Copy `.env.local.example` to `.env.local`
-   - Sign up for a free account at [Resend](https://resend.com)
-   - Add your API key to `.env.local`:
-     ```
-     RESEND_API_KEY=your_api_key_here
-     CONTACT_EMAIL=allwinraja2002@gmail.com
-     ```
-
-3. **Run development server**:
-   ```bash
-   npm run dev
-   ```
-
-4. **Open your browser**:
-   Navigate to [http://localhost:3000](http://localhost:3000)
-
-## 🚀 Deployment
-
-### Deploy to Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Visit [vercel.com](https://vercel.com)
-3. Import your repository
-4. Add environment variables in Vercel dashboard:
-   - `RESEND_API_KEY`
-   - `CONTACT_EMAIL`
-5. Deploy!
-
-### Build for Production
-
+## Quick Start
 ```bash
-npm run build
-npm start
+npm install
+npm run dev
 ```
 
-## 📧 Contact Form Setup
+## Deploy
+Push to GitHub → Vercel auto-deploys
 
-The contact form works in two modes:
-
-1. **Without API Key**: Form submissions are logged to console (development mode)
-2. **With Resend API Key**: Emails are sent to your configured email address
-
-To enable email functionality:
-1. Sign up at [resend.com](https://resend.com) (100 emails/day free)
-2. Get your API key
-3. Add it to `.env.local` or Vercel environment variables
-
-## 📝 Customization
-
-All content is in the component files:
-- `components/Hero.js` - Update name, title, contact info
-- `components/About.js` - Update objective and highlights
-- `components/Experience.js` - Update work experience
-- `components/Projects.js` - Update projects
-- `components/Skills.js` - Update skills
-- `components/Education.js` - Update education and certifications
-
-## 🎨 Design System
-
-The design system is defined in `app/globals.css`:
-- CSS variables for colors, spacing, typography
-- Reusable utility classes
-- Responsive breakpoints
-- Consistent shadows and transitions
-
-## 📱 Responsive Breakpoints
-
-- Desktop: > 768px
-- Mobile: ≤ 768px
-
-## 🔗 Links
-
-- **Email**: allwinraja2002@gmail.com
-- **Phone**: +91 9025014336
-- **LinkedIn**: [linkedin.com/in/allwinraja](https://www.linkedin.com/in/allwinraja/)
-- **GitHub**: [github.com/allwinrj](https://github.com/allwinrj)
-- **Portfolio**: [allwinrj.github.io/Portfolio](https://allwinrj.github.io/Portfolio/)
-
-## 📄 License
-
-© 2025 Allwin Raja J. All rights reserved.
+## Environment Variables (Optional)
+```env
+RESEND_API_KEY=your_key
+CONTACT_EMAIL=your_email
+```

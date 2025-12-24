@@ -1,9 +1,18 @@
-import Image from 'next/image'
 import styles from './Hero.module.css'
 
 export default function Hero() {
     return (
         <section id="home" className={styles.hero}>
+            {/* Background Image with Gradient Overlay */}
+            <div className={styles.heroBackground}></div>
+            <div className={styles.heroOverlay}></div>
+
+            {/* Available for Hire Badge */}
+            <div className={styles.hireBadge}>
+                <span className={styles.pulseIndicator}></span>
+                Available for Opportunities
+            </div>
+
             <div className="container">
                 <div className={styles.heroContent}>
                     <div className={styles.heroText}>
@@ -58,17 +67,6 @@ export default function Hero() {
                             <a href="#projects" className="btn btn-primary">View Projects</a>
                             <a href="#contact" className="btn btn-outline">Contact Me</a>
                         </div>
-                    </div>
-
-                    <div className={styles.heroImage}>
-                        <Image
-                            src="/images/profile-2.jpg"
-                            alt="Allwin Raja J"
-                            width={400}
-                            height={400}
-                            priority
-                            className={styles.profileImg}
-                        />
                     </div>
                 </div>
             </div>

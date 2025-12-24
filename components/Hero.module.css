@@ -15,12 +15,11 @@
     width: 100%;
     height: 100%;
     background-image: url('/images/profile-3.jpg');
-    background-size: cover;
-    background-position: 25% center;
-    /* Focus slightly left to frame the figure */
+    background-size: auto 90%;
+    /* Scale height to 90% to avoid zoom */
+    background-position: bottom left;
     background-repeat: no-repeat;
     z-index: 0;
-    /* Removed blur so you are clearly visible */
 }
 
 /* Gradient Overlay - Transparent on left, Dark on right */
@@ -32,14 +31,9 @@
     height: 100%;
     background: linear-gradient(to right,
             rgba(15, 23, 42, 0.0) 0%,
-            /* Totally clear on left */
-            rgba(15, 23, 42, 0.2) 30%,
-            /* Gradual darkening */
-            rgba(15, 23, 42, 0.8) 60%,
-            /* Darker behind text */
-            rgba(15, 23, 42, 0.98) 100%
-            /* Solid dark on right edge */
-        );
+            rgba(15, 23, 42, 0.4) 40%,
+            rgba(15, 23, 42, 0.9) 70%,
+            rgba(15, 23, 42, 1.0) 100%);
     z-index: 1;
 }
 
@@ -55,8 +49,8 @@
     flex-direction: column;
     align-items: flex-end;
     /* Align flex items to right */
-    text-align: right;
-    /* Align text to right */
+    text-align: left;
+    /* Align text to left */
     margin-top: 60px;
     /* Clear space from top */
 }
@@ -119,8 +113,7 @@
     margin-bottom: var(--spacing-xl);
     line-height: 1.6;
     max-width: 600px;
-    margin-left: auto;
-    /* Push to right */
+    /* margin-left: auto; removed */
 }
 
 .contactInfo {
@@ -128,8 +121,8 @@
     flex-wrap: wrap;
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-xl);
-    justify-content: flex-end;
-    /* Align right */
+    justify-content: flex-start;
+    /* Align left */
 }
 
 /* Glassmorphism for links */
@@ -159,8 +152,8 @@
     display: flex;
     gap: var(--spacing-md);
     flex-wrap: wrap;
-    justify-content: flex-end;
-    /* Align right */
+    justify-content: flex-start;
+    /* Align left */
 }
 
 /* Animations */

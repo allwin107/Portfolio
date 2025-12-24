@@ -46,11 +46,19 @@
 .heroContent {
     position: relative;
     z-index: 2;
-    max-width: 600px;
-    /* Limit width */
-    margin-left: auto;
-    /* Push to the right side */
-    padding-right: var(--spacing-md);
+    width: 100%;
+    padding-right: 5%;
+    /* Align with the badge */
+    padding-left: 20px;
+    /* Prevent text from hitting left edge on small resize */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* Align flex items to right */
+    text-align: right;
+    /* Align text to right */
+    margin-top: 60px;
+    /* Clear space from top */
 }
 
 .hireBadge {
@@ -111,6 +119,8 @@
     margin-bottom: var(--spacing-xl);
     line-height: 1.6;
     max-width: 600px;
+    margin-left: auto;
+    /* Push to right */
 }
 
 .contactInfo {
@@ -118,6 +128,8 @@
     flex-wrap: wrap;
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-xl);
+    justify-content: flex-end;
+    /* Align right */
 }
 
 /* Glassmorphism for links */
@@ -147,6 +159,8 @@
     display: flex;
     gap: var(--spacing-md);
     flex-wrap: wrap;
+    justify-content: flex-end;
+    /* Align right */
 }
 
 /* Animations */
@@ -206,8 +220,13 @@
     }
 
     .heroContent {
+        align-items: center;
+        /* Center flex items on mobile */
         text-align: center;
         padding-top: 60px;
+        padding-right: 20px;
+        /* Reset padding */
+        padding-left: 20px;
     }
 
     .name {
